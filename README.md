@@ -1,12 +1,47 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio website, built with React and Tailwind CSS and deployed to GitHub Pages.
 
-Currently, two official plugins are available:
+**Live site: [johanneshenz.github.io/Portfolio](https://johanneshenz.github.io/Portfolio/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Screenshot of the portfolio](docs/screenshot.png)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Single-page layout with Home, About, Projects and Contact sections
+- Animated loading screen and reveal-on-scroll transitions (Intersection Observer)
+- Responsive navigation with a mobile menu
+- Working contact form that sends email through EmailJS, with no backend needed
+
+## Tech stack
+
+React 19 · Vite 6 · Tailwind CSS 4 · EmailJS · GitHub Pages
+
+## Running locally
+
+```bash
+npm install
+cp .env.example .env   # add your EmailJS IDs for the contact form
+npm run dev
+```
+
+## Deployment
+
+```bash
+npm run deploy
+```
+
+This builds the site and publishes `dist/` to the `gh-pages` branch with [`gh-pages`](https://github.com/tschaub/gh-pages).
+
+## Project structure
+
+```
+src/
+├── App.jsx                 # page layout and loading state
+├── components/
+│   ├── LoadingScreen.jsx
+│   ├── Navbar.jsx, MobileMenu.jsx
+│   ├── RevealOnScroll.jsx
+│   └── sections/           # Home, About, Projects, Contact
+└── index.css               # Tailwind setup and custom animations
+```
