@@ -10,7 +10,7 @@ export const Home = () => {
             Hi, I'm Johannes Henz
         </h1>
         <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            Here you can see my projects and how to contact me!
+            Software engineer in Vienna, working with React Native, TypeScript and Java. Currently open to new roles.
         </p>
         <div className="flex justify-center space-x-4">
             <a
